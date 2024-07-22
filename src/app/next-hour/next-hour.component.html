@@ -5,7 +5,7 @@
         <div *ngFor="let hour of weatherData?.list?.slice(0, 7); let last = last" class="hour-detail">
             <div class="hour-list">
                 <span class="temperature">{{ hour.main.temp }}°C</span>
-                <span class="humidity">{{ hour.pop * 100 }}%</span>
+                <span class="humidity">{{ hour.main.humidity}}%</span>
                 <!-- <mat-icon class="weather-icon">{{ getWeatherIcon(hour.weather[0]) }}</mat-icon> -->
                 <img [src]="'https://openweathermap.org/img/wn/' + hour.weather[0].icon + '@2x.png'" 
                 alt="Weather icon"
