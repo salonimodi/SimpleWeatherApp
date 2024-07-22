@@ -1,0 +1,38 @@
+<div class="next-hour-container">
+    <span class="hr-name">Next hours</span>
+    <mat-divider class="top-divider"></mat-divider>
+    <div class="hour-detail-container">
+        <div *ngFor="let hour of weatherData?.list?.slice(0, 7); let last = last" class="hour-detail">
+            <div class="hour-list">
+                <span class="temperature">{{ hour.main.temp }}°C</span>
+                <span class="humidity">{{ hour.pop * 100 }}%</span>
+                <!-- <mat-icon class="weather-icon">{{ getWeatherIcon(hour.weather[0]) }}</mat-icon> -->
+                <img [src]="'https://openweathermap.org/img/wn/' + hour.weather[0].icon + '@2x.png'" 
+                alt="Weather icon"
+                style="width: 50px; height: 50px;">
+                <span class="time">{{ hour.dt_txt | date:'shortTime' }}</span>
+               
+            </div>
+            <mat-divider *ngIf="!last" class="hour-divider"></mat-divider>
+        </div>
+    </div>
+</div>
+
+<div class="next-days-container">
+    <span class="hr-name">Next 6 Days</span>
+    <mat-divider class="top-divider"></mat-divider>
+    <div *ngFor="let day of weatherData?.list | groupBy:'day'; let last = last" class="day-detail">
+        <div class="day-list">
+            <!-- <mat-icon class="weather-icon left">{{ getWeatherIcon(day.value.weather[0]) }}</mat-icon> -->
+            <img [src]="'https://openweathermap.org/img/wn/' + day.value.weather[0].icon + '@2x.png'" 
+            alt="Weather icon"
+            style="width: 50px; height: 50px;">
+            <span class="day-desc ">
+                <span class="day">{{ day.value.dt_txt| date: 'EEE, MMM dd'}}</span>
+                <span class="desc">{{ day.value.weather[0].description }}</span>
+            </span>
+            <span class="humidity right">{{ day.value.main.humidity }}%</span>
+        </div>
+        <mat-divider class="top-divider"></mat-divider>
+    </div>
+</div>

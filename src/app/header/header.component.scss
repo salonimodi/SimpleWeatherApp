@@ -1,0 +1,69 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+  background-color: #1976d2; 
+  color: #ffffff;
+
+}
+
+.webapp-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+button.mat-icon-button {
+  color: #1976d2;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px; // Small gap between input and dropdown
+}
+
+li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+  color: #000000; // Text color for city names
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+p {
+  margin: 8px 0;
+  color: #ffffff; // Text color for no results found
+}

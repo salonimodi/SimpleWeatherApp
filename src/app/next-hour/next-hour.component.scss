@@ -1,0 +1,87 @@
+.next-hour-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+
+  .hour-detail-container {
+    display: flex;
+    justify-content: center;
+  }
+  .hour-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .time {
+    color: gray;
+  }
+  .hour-divider {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 0 5px;
+  }
+  .hour-detail {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+.next-days-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  .day-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .day-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .desc {
+    color: gray;
+  }
+
+}
+
+
+h3 {
+  margin: 10px;
+  align-self: center;
+}
+
+.weather-icon{
+  align-self: center;
+}
+
+.humidity {
+  text-align: center;
+  color: blue;
+  align-self: center;
+}
+
+.top-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.left {
+  padding-left: 20px;
+}
+
+.right {
+  padding-right: 20px;
+}
+.hr-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin: 10px;
+  align-self: center;
+}
+
