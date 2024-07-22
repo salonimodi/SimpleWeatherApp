@@ -42,25 +42,4 @@ export class NextHourComponent implements OnInit{
       }
     });
   }
-
-  getWeatherIcon(weather: any): string {
-    const weatherId = weather.id;
-    if (weatherId >= 200 && weatherId < 300) {
-      return 'thunderstorm';
-    } else if (weatherId >= 300 && weatherId < 500) {
-      return 'drizzle';
-    } else if (weatherId >= 500 && weatherId < 600) {
-      return 'rainy';
-    } else if (weatherId >= 600 && weatherId < 700) {
-      return 'snowy';
-    } else if (weatherId >= 700 && weatherId < 800) {
-      return 'foggy';
-    } else if (weatherId === 800) {
-      return 'sunny';
-    } else if (weatherId > 800) {
-      return 'cloudy';
-    } else {
-      return 'weather';
-    }
-  }
 }
